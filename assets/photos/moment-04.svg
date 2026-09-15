@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg10" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#0d2a2a"/>
+      <stop offset="0.55" stop-color="#1a7a6a"/>
+      <stop offset="1" stop-color="#0d2a2a"/>
+    </linearGradient>
+    <radialGradient id="glow10">
+      <stop offset="0" stop-color="#38e0b6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#38e0b6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vig10" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg10)"/>
+  <circle cx="217" cy="124" r="549" fill="url(#glow10)" opacity="0.5"/><circle cx="1364" cy="411" r="667" fill="url(#glow10)" opacity="0.5"/><circle cx="1310" cy="422" r="761" fill="url(#glow10)" opacity="0.5"/>
+  <polygon points="827.4,617.8 827.4,807.1 663.5,901.7 499.6,807.1 499.6,617.8 663.5,523.2" fill="none" stroke="#38e0b6" stroke-opacity="0.14" stroke-width="3.6"/><polygon points="1350.1,-36.7 1350.1,258.2 1094.7,405.7 839.2,258.2 839.2,-36.7 1094.7,-184.2" fill="none" stroke="#38e0b6" stroke-opacity="0.09" stroke-width="2.1"/><polygon points="1786.3,1247.6 1786.3,1382.5 1669.4,1450.0 1552.5,1382.5 1552.5,1247.6 1669.4,1180.1" fill="none" stroke="#38e0b6" stroke-opacity="0.14" stroke-width="3.0"/><polygon points="873.0,115.0 873.0,461.8 572.7,635.2 272.4,461.8 272.4,115.0 572.7,-58.4" fill="none" stroke="#38e0b6" stroke-opacity="0.10" stroke-width="3.2"/><polygon points="1438.1,-117.5 1438.1,260.5 1110.7,449.5 783.4,260.5 783.4,-117.5 1110.7,-306.5" fill="none" stroke="#38e0b6" stroke-opacity="0.16" stroke-width="3.9"/>
+  <circle cx="752" cy="784" r="2.5" fill="#38e0b6" opacity="0.33"/><circle cx="1347" cy="1164" r="2.2" fill="#38e0b6" opacity="0.16"/><circle cx="482" cy="728" r="1.7" fill="#38e0b6" opacity="0.47"/><circle cx="130" cy="461" r="4.3" fill="#38e0b6" opacity="0.47"/><circle cx="239" cy="1157" r="3.8" fill="#38e0b6" opacity="0.30"/><circle cx="1571" cy="229" r="2.5" fill="#38e0b6" opacity="0.49"/><circle cx="713" cy="817" r="1.9" fill="#38e0b6" opacity="0.33"/><circle cx="1384" cy="320" r="2.4" fill="#38e0b6" opacity="0.38"/><circle cx="1509" cy="209" r="2.0" fill="#38e0b6" opacity="0.42"/><circle cx="525" cy="268" r="3.1" fill="#38e0b6" opacity="0.17"/><circle cx="1435" cy="291" r="2.3" fill="#38e0b6" opacity="0.29"/><circle cx="253" cy="1105" r="3.0" fill="#38e0b6" opacity="0.46"/><circle cx="1178" cy="1191" r="2.3" fill="#38e0b6" opacity="0.32"/><circle cx="800" cy="200" r="3.5" fill="#38e0b6" opacity="0.46"/><circle cx="217" cy="650" r="2.5" fill="#38e0b6" opacity="0.29"/><circle cx="1123" cy="670" r="1.8" fill="#38e0b6" opacity="0.49"/><circle cx="1327" cy="1046" r="2.8" fill="#38e0b6" opacity="0.17"/><circle cx="559" cy="182" r="3.3" fill="#38e0b6" opacity="0.44"/><circle cx="1279" cy="167" r="4.1" fill="#38e0b6" opacity="0.42"/><circle cx="1476" cy="412" r="2.3" fill="#38e0b6" opacity="0.43"/><circle cx="733" cy="394" r="3.1" fill="#38e0b6" opacity="0.33"/><circle cx="1183" cy="388" r="1.6" fill="#38e0b6" opacity="0.22"/><circle cx="1447" cy="690" r="3.4" fill="#38e0b6" opacity="0.16"/><circle cx="186" cy="356" r="4.1" fill="#38e0b6" opacity="0.24"/><circle cx="463" cy="107" r="3.3" fill="#38e0b6" opacity="0.34"/><circle cx="1574" cy="127" r="4.0" fill="#38e0b6" opacity="0.21"/><circle cx="764" cy="433" r="2.7" fill="#38e0b6" opacity="0.43"/><circle cx="1577" cy="219" r="3.3" fill="#38e0b6" opacity="0.30"/><circle cx="1578" cy="821" r="2.4" fill="#38e0b6" opacity="0.49"/><circle cx="1381" cy="902" r="4.0" fill="#38e0b6" opacity="0.40"/><circle cx="716" cy="892" r="2.1" fill="#38e0b6" opacity="0.36"/>
+  <rect width="1600" height="1200" fill="url(#vig10)"/>
+  <text x="800" y="600" text-anchor="middle" dominant-baseline="middle"
+        font-family="Poppins, Segoe UI, sans-serif" font-size="90" font-weight="600"
+        letter-spacing="16" fill="#ffffff" fill-opacity="0.82">MOMENT 04</text>
+</svg>

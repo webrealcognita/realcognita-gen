@@ -1,0 +1,12 @@
+# Normalise line endings so Windows and macOS collaborators do not fight
+* text=auto eol=lf
+
+# Binary assets must never be touched
+*.gif binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1400" width="1400" height="1400">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a1f2b"/>
+      <stop offset="0.55" stop-color="#123f5c"/>
+      <stop offset="1" stop-color="#0a1f2b"/>
+    </linearGradient>
+    <radialGradient id="glow7">
+      <stop offset="0" stop-color="#2f8fd0" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#2f8fd0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vig7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="1400" fill="url(#bg7)"/>
+  <circle cx="753" cy="210" r="447" fill="url(#glow7)" opacity="0.5"/><circle cx="371" cy="902" r="612" fill="url(#glow7)" opacity="0.5"/>
+  <polygon points="923.4,-289.8 923.4,172.1 523.3,403.1 123.3,172.1 123.3,-289.8 523.3,-520.8" fill="none" stroke="#2f8fd0" stroke-opacity="0.06" stroke-width="3.0"/><polygon points="1538.7,133.8 1538.7,307.5 1388.3,394.4 1237.9,307.5 1237.9,133.8 1388.3,47.0" fill="none" stroke="#2f8fd0" stroke-opacity="0.10" stroke-width="2.1"/><polygon points="1099.0,-221.5 1099.0,140.1 785.8,321.0 472.6,140.1 472.6,-221.5 785.8,-402.4" fill="none" stroke="#2f8fd0" stroke-opacity="0.15" stroke-width="3.1"/><polygon points="1159.5,-220.8 1159.5,148.7 839.4,333.5 519.4,148.7 519.4,-220.8 839.4,-405.6" fill="none" stroke="#2f8fd0" stroke-opacity="0.06" stroke-width="2.1"/><polygon points="1058.7,-68.4 1058.7,235.9 795.2,388.0 531.7,235.9 531.7,-68.4 795.2,-220.6" fill="none" stroke="#2f8fd0" stroke-opacity="0.11" stroke-width="2.9"/><polygon points="957.5,915.6 957.5,1096.0 801.2,1186.2 645.0,1096.0 645.0,915.6 801.2,825.4" fill="none" stroke="#2f8fd0" stroke-opacity="0.11" stroke-width="2.0"/>
+  <circle cx="652" cy="1293" r="2.6" fill="#2f8fd0" opacity="0.24"/><circle cx="252" cy="1092" r="1.7" fill="#2f8fd0" opacity="0.26"/><circle cx="693" cy="481" r="2.8" fill="#2f8fd0" opacity="0.36"/><circle cx="102" cy="717" r="2.0" fill="#2f8fd0" opacity="0.27"/><circle cx="1307" cy="590" r="4.4" fill="#2f8fd0" opacity="0.18"/><circle cx="781" cy="1105" r="4.0" fill="#2f8fd0" opacity="0.27"/><circle cx="490" cy="695" r="3.9" fill="#2f8fd0" opacity="0.17"/><circle cx="131" cy="378" r="3.6" fill="#2f8fd0" opacity="0.17"/><circle cx="1024" cy="433" r="3.2" fill="#2f8fd0" opacity="0.39"/><circle cx="624" cy="1003" r="4.2" fill="#2f8fd0" opacity="0.27"/><circle cx="1317" cy="498" r="3.3" fill="#2f8fd0" opacity="0.32"/><circle cx="305" cy="402" r="3.7" fill="#2f8fd0" opacity="0.29"/><circle cx="1284" cy="695" r="2.0" fill="#2f8fd0" opacity="0.29"/><circle cx="389" cy="192" r="2.8" fill="#2f8fd0" opacity="0.34"/><circle cx="989" cy="1381" r="3.5" fill="#2f8fd0" opacity="0.28"/><circle cx="323" cy="116" r="2.0" fill="#2f8fd0" opacity="0.38"/><circle cx="17" cy="1164" r="2.0" fill="#2f8fd0" opacity="0.25"/><circle cx="204" cy="748" r="3.3" fill="#2f8fd0" opacity="0.26"/><circle cx="176" cy="1203" r="4.4" fill="#2f8fd0" opacity="0.38"/><circle cx="1036" cy="639" r="4.1" fill="#2f8fd0" opacity="0.48"/><circle cx="953" cy="783" r="2.7" fill="#2f8fd0" opacity="0.29"/><circle cx="674" cy="561" r="2.1" fill="#2f8fd0" opacity="0.49"/><circle cx="617" cy="154" r="3.3" fill="#2f8fd0" opacity="0.19"/><circle cx="793" cy="751" r="4.3" fill="#2f8fd0" opacity="0.36"/><circle cx="98" cy="291" r="2.6" fill="#2f8fd0" opacity="0.37"/><circle cx="1338" cy="843" r="2.9" fill="#2f8fd0" opacity="0.19"/><circle cx="683" cy="1369" r="2.9" fill="#2f8fd0" opacity="0.26"/><circle cx="202" cy="1050" r="3.7" fill="#2f8fd0" opacity="0.32"/>
+  <rect width="1400" height="1400" fill="url(#vig7)"/>
+  <text x="700" y="700" text-anchor="middle" dominant-baseline="middle"
+        font-family="Poppins, Segoe UI, sans-serif" font-size="105" font-weight="600"
+        letter-spacing="19" fill="#ffffff" fill-opacity="0.82">HERO MOMENT</text>
+</svg>

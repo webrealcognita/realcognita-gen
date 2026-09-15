@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350">
+  <defs>
+    <linearGradient id="bg0" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#06312f"/>
+      <stop offset="0.55" stop-color="#0a5b52"/>
+      <stop offset="1" stop-color="#06312f"/>
+    </linearGradient>
+    <radialGradient id="glow0">
+      <stop offset="0" stop-color="#12a08d" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#12a08d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vig0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1350" fill="url(#bg0)"/>
+  <circle cx="708" cy="486" r="1389" fill="url(#glow0)" opacity="0.5"/><circle cx="607" cy="748" r="903" fill="url(#glow0)" opacity="0.5"/><circle cx="2098" cy="1002" r="1064" fill="url(#glow0)" opacity="0.5"/>
+  <polygon points="152.6,1269.7 152.6,1588.4 -123.4,1747.7 -399.4,1588.4 -399.4,1269.7 -123.4,1110.4" fill="none" stroke="#12a08d" stroke-opacity="0.15" stroke-width="3.6"/><polygon points="2956.1,209.0 2956.1,681.1 2547.3,917.1 2138.5,681.1 2138.5,209.0 2547.3,-27.0" fill="none" stroke="#12a08d" stroke-opacity="0.07" stroke-width="1.8"/><polygon points="541.1,-200.0 541.1,237.2 162.5,455.8 -216.1,237.2 -216.1,-200.0 162.5,-418.5" fill="none" stroke="#12a08d" stroke-opacity="0.16" stroke-width="2.8"/><polygon points="1955.9,744.8 1955.9,935.4 1790.9,1030.6 1625.9,935.4 1625.9,744.8 1790.9,649.5" fill="none" stroke="#12a08d" stroke-opacity="0.06" stroke-width="1.7"/><polygon points="2509.5,226.6 2509.5,573.2 2209.4,746.5 1909.2,573.2 1909.2,226.6 2209.4,53.3" fill="none" stroke="#12a08d" stroke-opacity="0.09" stroke-width="2.3"/><polygon points="1902.2,24.3 1902.2,368.2 1604.4,540.1 1306.6,368.2 1306.6,24.3 1604.4,-147.6" fill="none" stroke="#12a08d" stroke-opacity="0.10" stroke-width="2.8"/><polygon points="356.1,1112.3 356.1,1593.5 -60.6,1834.2 -477.4,1593.5 -477.4,1112.3 -60.6,871.7" fill="none" stroke="#12a08d" stroke-opacity="0.06" stroke-width="3.6"/><polygon points="2127.1,951.1 2127.1,1322.5 1805.5,1508.1 1483.9,1322.5 1483.9,951.1 1805.5,765.4" fill="none" stroke="#12a08d" stroke-opacity="0.12" stroke-width="3.6"/>
+  <circle cx="2384" cy="1181" r="4.5" fill="#12a08d" opacity="0.32"/><circle cx="723" cy="393" r="1.9" fill="#12a08d" opacity="0.27"/><circle cx="2213" cy="274" r="3.9" fill="#12a08d" opacity="0.34"/><circle cx="690" cy="124" r="3.9" fill="#12a08d" opacity="0.26"/><circle cx="581" cy="248" r="4.0" fill="#12a08d" opacity="0.16"/><circle cx="2355" cy="351" r="1.7" fill="#12a08d" opacity="0.39"/><circle cx="313" cy="202" r="1.6" fill="#12a08d" opacity="0.18"/><circle cx="1678" cy="1120" r="3.6" fill="#12a08d" opacity="0.44"/><circle cx="1259" cy="704" r="2.2" fill="#12a08d" opacity="0.23"/><circle cx="1631" cy="1114" r="2.8" fill="#12a08d" opacity="0.25"/><circle cx="1182" cy="866" r="3.6" fill="#12a08d" opacity="0.49"/><circle cx="858" cy="438" r="1.8" fill="#12a08d" opacity="0.36"/><circle cx="805" cy="257" r="1.5" fill="#12a08d" opacity="0.24"/><circle cx="1693" cy="502" r="2.0" fill="#12a08d" opacity="0.30"/><circle cx="149" cy="1057" r="4.1" fill="#12a08d" opacity="0.23"/><circle cx="1961" cy="856" r="4.3" fill="#12a08d" opacity="0.36"/><circle cx="178" cy="168" r="2.1" fill="#12a08d" opacity="0.44"/><circle cx="287" cy="124" r="4.0" fill="#12a08d" opacity="0.19"/><circle cx="1453" cy="263" r="4.4" fill="#12a08d" opacity="0.40"/><circle cx="1150" cy="982" r="1.7" fill="#12a08d" opacity="0.39"/>
+  <rect width="2400" height="1350" fill="url(#vig0)"/>
+  <text x="1200" y="675" text-anchor="middle" dominant-baseline="middle"
+        font-family="Poppins, Segoe UI, sans-serif" font-size="101" font-weight="600"
+        letter-spacing="18" fill="#ffffff" fill-opacity="0.82">THE ROOM</text>
+</svg>

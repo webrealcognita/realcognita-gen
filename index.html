@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realcognita</title>
+  <meta name="description" content="One team. One purpose. One future. Realcognita General Assembly — November 2026." />
+  <meta name="theme-color" content="#0b0c11" />
+
+  <!-- Browser tab icon. The SVG is vector + fully transparent so the mark sits
+       cleanly on any tab colour; the GIF is the fallback for old browsers. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="assets/mini_logo.gif" type="image/gif" />
+  <link rel="apple-touch-icon" href="assets/mini_logo.gif" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swap the Google Fonts link above for licensed Komet Light/Medium/Bold
+     webfont files (@font-face) once available — see comment in style.css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== AMBIENT LAYERS (countdown only) ===== -->
+  <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+
+  <!-- ===== COUNTDOWN OVERLAY — the stage holding screen ===== -->
+  <div id="countdown-overlay" class="countdown-overlay">
+
+    <!-- atmosphere -->
+    <div class="aurora" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+    </div>
+    <div class="grid-plane" aria-hidden="true"></div>
+    <div class="hex-rain" aria-hidden="true"></div>
+    <div class="light-column" aria-hidden="true"></div>
+
+    <svg class="hex-watermark spin-slow" viewBox="0 0 600 600" aria-hidden="true">
+      <polygon points="300,60 480,170 480,390 300,500 120,390 120,170" />
+      <polygon points="300,140 430,215 430,345 300,420 170,345 170,215" />
+    </svg>
+
+
+    <!-- top bar -->
+    <header class="cd-bar cd-bar-top reveal" data-delay="0">
+      <span class="cd-brand">
+        <img src="assets/favicon.svg" alt="" class="cd-mark" />
+        Realcognita
+      </span>
+    </header>
+
+    <div class="countdown-wrap" id="tilt-wrap">
+
+      <!-- Brand GIF — drop your file at assets/logo.gif; SVG mark shows if missing -->
+      <div class="logomark reveal" data-delay="1">
+        <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img logo-gif" />
+        <svg class="brand-fallback logo-fallback" viewBox="0 0 40 40" aria-hidden="true">
+          <polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" />
+          <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" />
+        </svg>
+      </div>
+
+      <h1 class="cd-title">One Team. One Purpose. One Future.</h1>
+
+      <div class="rule-diamond reveal" data-delay="3" aria-hidden="true">
+        <span class="rl"></span><i></i><span class="rl"></span>
+      </div>
+
+
+      <!-- countdown band: hairline-separated columns, no boxed card -->
+      <div class="band reveal" data-delay="5">
+        <span class="band-glow" aria-hidden="true"></span>
+        <div class="digits" id="digits">
+          <div class="unit"><span class="value" id="days">00</span><span class="label">days</span></div>
+          <div class="unit"><span class="value" id="hours">00</span><span class="label">hours</span></div>
+          <div class="unit"><span class="value" id="minutes">00</span><span class="label">minutes</span></div>
+          <div class="unit"><span class="value" id="seconds">00</span><span class="label">seconds</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- bottom bar -->
+    <footer class="cd-bar cd-bar-bottom reveal" data-delay="7">
+      <span>General Assembly 2026</span>
+      <span class="cd-when" id="cd-when">27 November 2026 &nbsp;·&nbsp; 09:00 SGT</span>
+    </footer>
+  </div>
+
+
+  <!-- ============================================================
+       PRESENTATION DECK
+
+       Every slide below is a CONTENT PLACEHOLDER. The layouts are real —
+       swap the words, numbers, names and images for the actual ones.
+       Slides marked TODO are the ones needing your input.
+
+       Layout options (just change the class on .stage):
+         stage-center   headline centred, for statements and chapter breaks
+         stage-split    two columns, text left / visual right
+         stage          left-aligned, for lists and long-form
+       ============================================================ -->
+  <main id="deck" class="deck" hidden>
+
+    <div class="deck-bg" aria-hidden="true">
+      <span class="glow g1"></span>
+      <span class="glow g2"></span>
+      <div class="deck-grid"></div>
+    </div>
+
+    <!-- ═══════════ 01 · OPENING TITLE ═══════════ -->
+    <section class="slide is-active" data-chapter="Opening">
+      <div class="stage stage-center">
+        <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img slide-logo" data-anim="1" />
+        <svg class="brand-fallback slide-logo-fb" viewBox="0 0 40 40" aria-hidden="true" data-anim="1">
+          <polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" />
+          <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" />
+        </svg>
+        <h1 class="title-xl" data-anim="2">
+          <span>One Team.</span> <span class="grad">One Purpose.</span> <span>One Future.</span>
+        </h1>
+        <p class="kicker" data-anim="3">General Assembly &nbsp;·&nbsp; November 2026</p>
+        <p class="lede" data-anim="4">Every office. Every team. One room.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 02 · WELCOME ═══════════ -->
+    <section class="slide" data-chapter="Welcome">
+      <div class="stage stage-split">
+        <div class="col">
+          <h2 class="title-lg" data-anim="2">The wait is over.</h2>
+          <p class="body" data-anim="3">For a year we worked in parallel — different cities, different clients,
+            different hours. Today the whole of Realcognita stands in the same place at the same time.</p>
+          <p class="body" data-anim="4">This is not a status update. It is the moment we see the whole picture
+            we have each been drawing a corner of.</p>
+          <!-- TODO: replace with the actual welcome message from leadership -->
+        </div>
+        <div class="col col-visual">
+          <!-- brand lockup -->
+          <div class="col-brand" data-anim="2">
+            <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img col-logo" />
+            <svg class="brand-fallback col-logo-fb" viewBox="0 0 40 40" aria-hidden="true">
+              <polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" />
+              <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 03 · THE YEAR IN NUMBERS ═══════════ -->
+    <section class="slide" data-chapter="The Numbers">
+      <div class="stage stage-center">
+        <h2 class="title-lg" data-anim="2">The year in four numbers</h2>
+        <div class="figure-row">
+          <!-- TODO: confirm the real figures -->
+          <div class="figure" data-anim="3"><b data-count="12">0</b><span>offices</span></div>
+          <div class="figure" data-anim="4"><b data-count="480">0</b><span>people</span></div>
+          <div class="figure" data-anim="5"><b data-count="37">0</b><span>projects shipped</span></div>
+          <div class="figure" data-anim="6"><b data-count="1">0</b><span>assembly</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 04 · CHAPTER BREAK — ONE TEAM ═══════════ -->
+    <section class="slide" data-chapter="One Team">
+      <div class="stage stage-center">
+        <p class="chapter-num" data-anim="1">01</p>
+        <h2 class="title-xl grad" data-anim="2">One Team</h2>
+        <p class="lede" data-anim="3">Regions, functions and time zones collapsing into a single room.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 05 · WHERE WE ARE ═══════════ -->
+    <section class="slide" data-chapter="Our Offices">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">Where we are</h2>
+        <!-- TODO: confirm the office list, cities and headcounts.
+             Flags live in assets/flags/ — add another country by dropping in
+             its SVG and copying one <article> block. -->
+        <div class="flag-grid">
+          <article class="flag-card" data-anim="3">
+            <h3 class="flag-country">Singapore</h3>
+            <figure class="flag"><img src="assets/flags/singapore.svg" alt="Flag of Singapore" /></figure>
+            <p class="flag-meta"><b>HQ</b><span>120 people</span></p>
+          </article>
+          <article class="flag-card" data-anim="4">
+            <h3 class="flag-country">Philippines</h3>
+            <figure class="flag"><img src="assets/flags/philippines.svg" alt="Flag of Philippines" /></figure>
+            <p class="flag-meta"><b>Manila</b><span>165 people</span></p>
+          </article>
+          <article class="flag-card" data-anim="5">
+            <h3 class="flag-country">Malaysia</h3>
+            <figure class="flag"><img src="assets/flags/malaysia.svg" alt="Flag of Malaysia" /></figure>
+            <p class="flag-meta"><b>Kuala Lumpur</b><span>48 people</span></p>
+          </article>
+          <article class="flag-card" data-anim="6">
+            <h3 class="flag-country">Indonesia</h3>
+            <figure class="flag"><img src="assets/flags/indonesia.svg" alt="Flag of Indonesia" /></figure>
+            <p class="flag-meta"><b>Jakarta</b><span>62 people</span></p>
+          </article>
+          <article class="flag-card" data-anim="7">
+            <h3 class="flag-country">Vietnam</h3>
+            <figure class="flag"><img src="assets/flags/vietnam.svg" alt="Flag of Vietnam" /></figure>
+            <p class="flag-meta"><b>Ho Chi Minh</b><span>55 people</span></p>
+          </article>
+          <article class="flag-card" data-anim="8">
+            <h3 class="flag-country">Thailand</h3>
+            <figure class="flag"><img src="assets/flags/thailand.svg" alt="Flag of Thailand" /></figure>
+            <p class="flag-meta"><b>Bangkok</b><span>30 people</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 06 · CHAPTER BREAK — ONE PURPOSE ═══════════ -->
+    <section class="slide" data-chapter="One Purpose">
+      <div class="stage stage-center">
+        <p class="chapter-num" data-anim="1">02</p>
+        <h2 class="title-xl grad" data-anim="2">One Purpose</h2>
+        <p class="lede" data-anim="3">Empowering visionary builders.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 07 · WHAT WE DO ═══════════ -->
+    <section class="slide" data-chapter="What We Do">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">What we are actually for</h2>
+        <!-- TODO: replace with your real service pillars -->
+        <div class="pillar-row">
+          <div class="pillar" data-anim="3">
+            <b>Clarity</b>
+            <p>Turning a founder's rough picture into something a team can actually build against.</p>
+          </div>
+          <div class="pillar" data-anim="4">
+            <b>Craft</b>
+            <p>Work that holds up under scrutiny — from the first wireframe to the last deployment.</p>
+          </div>
+          <div class="pillar" data-anim="5">
+            <b>Proof</b>
+            <p>Shipping it, measuring it, and being honest about what the numbers say.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 08 · THE YEAR IN MILESTONES ═══════════ -->
+    <section class="slide" data-chapter="Milestones">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">The year in milestones</h2>
+        <!-- TODO: swap in the real milestones — 4 to 6 works best -->
+        <ol class="timeline">
+          <li data-anim="3"><b>Q1</b><span>Bangkok office opened · first regional delivery pod</span></li>
+          <li data-anim="4"><b>Q2</b><span>Largest engagement to date signed</span></li>
+          <li data-anim="5"><b>Q3</b><span>Crossed 450 people across six markets</span></li>
+          <li data-anim="6"><b>Q4</b><span>Internal platform rebuilt end to end</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ 09 · QUOTE / VOICE OF THE TEAM ═══════════ -->
+    <section class="slide" data-chapter="Our People">
+      <div class="stage stage-quote">
+        <!-- PHOTO BOX · square portrait of the person quoted -->
+        <figure class="photo square kb" data-anim="1">
+          <img src="assets/photos/portrait.svg" alt="Portrait" />
+        </figure>
+        <blockquote class="quote" data-anim="2">
+          &ldquo;The best thing we built this year wasn't a product. It was the habit of
+          asking each other for help before it was too late.&rdquo;
+        </blockquote>
+        <!-- TODO: use a real quote from a team member, with their name and role -->
+        <p class="quote-by" data-anim="3">Name Surname &nbsp;·&nbsp; Role, Office</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 10 · RECOGNITION ═══════════ -->
+    <section class="slide" data-chapter="Recognition">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">People who moved the year</h2>
+        <!-- TODO: award categories + winners, or delete this slide if awards are live on stage -->
+        <div class="tile-grid tri">
+          <div class="tile" data-anim="3"><b>Builder of the Year</b><span>To be announced on stage</span></div>
+          <div class="tile" data-anim="4"><b>One Team Award</b><span>To be announced on stage</span></div>
+          <div class="tile" data-anim="5"><b>Newcomer of the Year</b><span>To be announced on stage</span></div>
+          <div class="tile" data-anim="6"><b>Client Champion</b><span>To be announced on stage</span></div>
+          <div class="tile" data-anim="7"><b>Craft Award</b><span>To be announced on stage</span></div>
+          <div class="tile" data-anim="8"><b>Above &amp; Beyond</b><span>To be announced on stage</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 11 · CHAPTER BREAK — ONE FUTURE ═══════════ -->
+    <section class="slide" data-chapter="One Future">
+      <div class="stage stage-center">
+        <p class="chapter-num" data-anim="1">03</p>
+        <h2 class="title-xl grad" data-anim="2">One Future</h2>
+        <p class="lede" data-anim="3">The roadmap we commit to together.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 12 · THE ROADMAP ═══════════ -->
+    <section class="slide" data-chapter="The Roadmap">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">What we are committing to</h2>
+        <!-- TODO: the three-to-four commitments leadership wants on record -->
+        <ol class="timeline">
+          <li data-anim="3"><b>01</b><span>Headline commitment number one goes here</span></li>
+          <li data-anim="4"><b>02</b><span>Headline commitment number two goes here</span></li>
+          <li data-anim="5"><b>03</b><span>Headline commitment number three goes here</span></li>
+        </ol>
+        <p class="body wide-left" data-anim="6">Twelve months from now we will be standing here again,
+          measuring ourselves against exactly this list.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 13 · A BIG STATEMENT ═══════════ -->
+    <section class="slide" data-chapter="Statement">
+      <div class="stage stage-center">
+        <!-- TODO: one sentence the room should remember. Keep it short. -->
+        <h2 class="statement" data-anim="2">We do not scale by adding people.<br />
+          We scale by <span class="grad">trusting them.</span></h2>
+      </div>
+    </section>
+
+    <!-- ═══════════ 14 · PROGRAMME ═══════════ -->
+    <section class="slide" data-chapter="The Day">
+      <div class="stage">
+        <h2 class="title-lg" data-anim="2">How the day runs</h2>
+        <!-- TODO: confirm the final run of show -->
+        <ol class="agenda">
+          <li data-anim="3"><b>09:00</b><span>Doors &amp; coffee</span></li>
+          <li data-anim="4"><b>10:00</b><span>Opening address — One Team</span></li>
+          <li data-anim="5"><b>11:30</b><span>The year in review</span></li>
+          <li data-anim="6"><b>13:00</b><span>Lunch &amp; regional tables</span></li>
+          <li data-anim="7"><b>14:30</b><span>The roadmap — One Future</span></li>
+          <li data-anim="8"><b>17:00</b><span>Awards &amp; closing</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ 15 · MEDIA PLACEHOLDER ═══════════ -->
+    <section class="slide" data-chapter="Moments">
+      <div class="stage stage-center">
+        <h2 class="title-lg" data-anim="2">The year, in pictures</h2>
+        <!-- PHOTO WALL · sample images in place. Swap each src for your own
+             file, keeping the <figure> wrapper. A looping clip works too:
+             <video src="assets/reel.mp4" autoplay muted loop playsinline></video> -->
+        <div class="photo-wall">
+          <figure class="photo kb wide" data-anim="3"><img src="assets/photos/moment-01.svg" alt="Hero moment" /></figure>
+          <figure class="photo kb" data-anim="4"><img src="assets/photos/moment-02.svg" alt="Moment" /></figure>
+          <figure class="photo kb" data-anim="5"><img src="assets/photos/moment-03.svg" alt="Moment" /></figure>
+          <figure class="photo kb" data-anim="6"><img src="assets/photos/moment-04.svg" alt="Moment" /></figure>
+          <figure class="photo kb" data-anim="7"><img src="assets/photos/moment-05.svg" alt="Moment" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 16 · FULL-BLEED PHOTO ═══════════ -->
+    <section class="slide slide-bleed" data-chapter="The Room">
+      <!-- FULL-SCREEN PHOTO · sample image in place; swap the src for your own.
+           A <video> works here too. The caption block sits on top of it. -->
+      <figure class="photo bleed kb-slow">
+        <img src="assets/photos/room.svg" alt="The room" />
+      </figure>
+      <div class="bleed-caption">
+        <h2 class="title-lg" data-anim="2">This is what 480 people<br />in one room looks like.</h2>
+        <p class="kicker" data-anim="3">General Assembly · November 2026</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 17 · CLOSING ═══════════ -->
+    <section class="slide" data-chapter="Closing">
+      <div class="stage stage-center">
+        <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img slide-logo sm" data-anim="1" />
+        <svg class="brand-fallback slide-logo-fb sm" viewBox="0 0 40 40" aria-hidden="true" data-anim="1">
+          <polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" />
+          <polygon points="20,10 29,15 29,25 20,30 11,25 11,15" />
+        </svg>
+        <h2 class="title-xl" data-anim="2">See you on <span class="grad">the floor.</span></h2>
+        <p class="kicker" data-anim="3">Realcognita General Assembly &nbsp;·&nbsp; November 2026</p>
+      </div>
+    </section>
+
+    <!-- ---------- DECK CHROME ---------- -->
+    <div class="deck-rail" aria-hidden="true">
+      <span class="rail-fill" id="rail-fill"></span>
+    </div>
+
+    <div class="deck-hud">
+      <img src="assets/favicon.svg" alt="" class="hud-mark" />
+      <span class="hud-chapter" id="hud-chapter">Opening</span>
+      <span class="hud-count"><b id="hud-now">01</b> / <i id="hud-total">17</i></span>
+    </div>
+
+    <nav class="deck-dots" id="deck-dots" aria-label="Slides"></nav>
+
+    <div class="deck-controls">
+      <button type="button" id="btn-prev" class="ctrl" aria-label="Previous slide">&#8592;</button>
+      <button type="button" id="btn-play" class="ctrl ctrl-play" aria-label="Toggle autoplay">
+        <span class="ic-play">&#9654;</span><span class="ic-pause">&#10073;&#10073;</span>
+      </button>
+      <button type="button" id="btn-next" class="ctrl" aria-label="Next slide">&#8594;</button>
+      <button type="button" id="btn-full" class="ctrl" aria-label="Fullscreen">&#9974;</button>
+    </div>
+
+    <p class="deck-hint" id="deck-hint">← → or space to advance · F for fullscreen</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

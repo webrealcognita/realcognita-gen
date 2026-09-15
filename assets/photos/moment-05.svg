@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg11" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#06312f"/>
+      <stop offset="0.55" stop-color="#0a5b52"/>
+      <stop offset="1" stop-color="#06312f"/>
+    </linearGradient>
+    <radialGradient id="glow11">
+      <stop offset="0" stop-color="#12a08d" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#12a08d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vig11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg11)"/>
+  <circle cx="655" cy="1040" r="914" fill="url(#glow11)" opacity="0.5"/><circle cx="161" cy="321" r="946" fill="url(#glow11)" opacity="0.5"/><circle cx="762" cy="1061" r="683" fill="url(#glow11)" opacity="0.5"/>
+  <polygon points="1720.6,869.0 1720.6,1140.9 1485.2,1276.8 1249.8,1140.9 1249.8,869.0 1485.2,733.1" fill="none" stroke="#12a08d" stroke-opacity="0.14" stroke-width="2.0"/><polygon points="1666.1,402.0 1666.1,728.2 1383.5,891.4 1100.9,728.2 1100.9,402.0 1383.5,238.8" fill="none" stroke="#12a08d" stroke-opacity="0.07" stroke-width="2.6"/><polygon points="475.3,446.1 475.3,865.3 112.2,1074.9 -250.8,865.3 -250.8,446.1 112.2,236.6" fill="none" stroke="#12a08d" stroke-opacity="0.12" stroke-width="3.0"/><polygon points="919.6,348.2 919.6,716.5 600.6,900.6 281.7,716.5 281.7,348.2 600.6,164.0" fill="none" stroke="#12a08d" stroke-opacity="0.12" stroke-width="3.1"/><polygon points="1551.2,-95.0 1551.2,36.9 1436.9,102.9 1322.6,36.9 1322.6,-95.0 1436.9,-161.0" fill="none" stroke="#12a08d" stroke-opacity="0.15" stroke-width="3.0"/><polygon points="1609.9,190.6 1609.9,509.1 1334.0,668.4 1058.1,509.1 1058.1,190.6 1334.0,31.3" fill="none" stroke="#12a08d" stroke-opacity="0.07" stroke-width="2.1"/><polygon points="533.4,-187.7 533.4,-39.1 404.8,35.2 276.1,-39.1 276.1,-187.7 404.8,-261.9" fill="none" stroke="#12a08d" stroke-opacity="0.12" stroke-width="2.5"/><polygon points="1026.6,1147.6 1026.6,1295.6 898.4,1369.6 770.3,1295.6 770.3,1147.6 898.4,1073.7" fill="none" stroke="#12a08d" stroke-opacity="0.08" stroke-width="3.4"/><polygon points="1092.5,-231.8 1092.5,77.5 824.7,232.1 556.9,77.5 556.9,-231.8 824.7,-386.4" fill="none" stroke="#12a08d" stroke-opacity="0.06" stroke-width="1.8"/>
+  <circle cx="906" cy="238" r="3.5" fill="#12a08d" opacity="0.27"/><circle cx="498" cy="18" r="2.7" fill="#12a08d" opacity="0.47"/><circle cx="215" cy="848" r="1.5" fill="#12a08d" opacity="0.31"/><circle cx="779" cy="818" r="2.1" fill="#12a08d" opacity="0.33"/><circle cx="1576" cy="923" r="2.8" fill="#12a08d" opacity="0.28"/><circle cx="632" cy="1188" r="1.5" fill="#12a08d" opacity="0.45"/><circle cx="1560" cy="711" r="4.5" fill="#12a08d" opacity="0.16"/><circle cx="300" cy="1195" r="3.3" fill="#12a08d" opacity="0.35"/><circle cx="67" cy="176" r="2.8" fill="#12a08d" opacity="0.15"/><circle cx="977" cy="996" r="2.7" fill="#12a08d" opacity="0.18"/><circle cx="334" cy="764" r="1.5" fill="#12a08d" opacity="0.28"/><circle cx="995" cy="153" r="3.3" fill="#12a08d" opacity="0.44"/><circle cx="217" cy="463" r="3.4" fill="#12a08d" opacity="0.26"/><circle cx="365" cy="733" r="3.7" fill="#12a08d" opacity="0.21"/><circle cx="1006" cy="665" r="3.6" fill="#12a08d" opacity="0.29"/><circle cx="772" cy="94" r="1.6" fill="#12a08d" opacity="0.19"/><circle cx="820" cy="306" r="3.7" fill="#12a08d" opacity="0.29"/><circle cx="673" cy="1086" r="3.0" fill="#12a08d" opacity="0.33"/><circle cx="1487" cy="1173" r="1.9" fill="#12a08d" opacity="0.32"/><circle cx="1046" cy="739" r="1.7" fill="#12a08d" opacity="0.22"/>
+  <rect width="1600" height="1200" fill="url(#vig11)"/>
+  <text x="800" y="600" text-anchor="middle" dominant-baseline="middle"
+        font-family="Poppins, Segoe UI, sans-serif" font-size="90" font-weight="600"
+        letter-spacing="16" fill="#ffffff" fill-opacity="0.82">MOMENT 05</text>
+</svg>
