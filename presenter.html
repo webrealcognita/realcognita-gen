@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presenter — Realcognita GA 2026</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --teal:#00A499; --green:#26D07C;
+      --bg:#0b0c11; --panel:#14161d;
+      --line:rgba(255,255,255,.09);
+      --line-hot:rgba(38,208,124,.4);
+      --text:#f5f5f6; --dim:#8d8d99;
+      --ease:cubic-bezier(.16,1,.3,1);
+      --grad:linear-gradient(30deg,var(--green),var(--teal));
+    }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    body{
+      font-family:'Poppins','Segoe UI',system-ui,sans-serif;
+      font-weight:300; color:var(--text); background:var(--bg);
+      height:100vh; overflow:hidden;
+      display:grid; grid-template-rows:auto 1fr auto;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* ---------- top bar ---------- */
+    .bar{
+      display:flex; align-items:center; gap:18px;
+      padding:14px 22px; border-bottom:1px solid var(--line);
+      background:var(--panel);
+    }
+    .brand{ display:flex; align-items:center; gap:10px; margin-right:auto; }
+    .brand img{ width:22px; height:22px; display:block; }
+    .brand span{
+      font-size:.68rem; letter-spacing:.26em; text-transform:uppercase;
+      font-weight:600; color:rgba(255,255,255,.7);
+    }
+    .link-state{
+      display:flex; align-items:center; gap:8px;
+      font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; font-weight:500;
+      color:var(--dim);
+    }
+    .dot{ width:7px; height:7px; border-radius:50%; background:#c0392b; transition:background .3s; }
+    .dot.live{ background:var(--green); box-shadow:0 0 9px rgba(38,208,124,.8); }
+
+    /* ---------- clocks ---------- */
+    .clocks{ display:flex; align-items:center; gap:22px; }
+    .clock{ text-align:right; }
+    .clock b{
+      display:block; font-size:1.5rem; font-weight:700; line-height:1;
+      font-variant-numeric:tabular-nums; letter-spacing:-.02em;
+    }
+    .clock.elapsed b{
+      background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .clock span{
+      display:block; margin-top:5px;
+      font-size:.55rem; letter-spacing:.24em; text-transform:uppercase; color:var(--dim);
+    }
+    .tbtn{
+      font-family:inherit; font-size:.58rem; letter-spacing:.16em; text-transform:uppercase;
+      font-weight:600; color:var(--dim); cursor:pointer;
+      padding:7px 11px; border-radius:100px;
+      background:rgba(255,255,255,.04); border:1px solid var(--line);
+      transition:color .25s, border-color .25s, background .25s;
+    }
+    .tbtn:hover{ color:#fff; border-color:var(--line-hot); background:rgba(38,208,124,.1); }
+
+    /* ---------- main ---------- */
+    main{
+      display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+      gap:20px; padding:20px 22px; min-height:0;
+    }
+    .pane{ display:flex; flex-direction:column; min-height:0; }
+    .pane-label{
+      font-size:.58rem; letter-spacing:.28em; text-transform:uppercase;
+      font-weight:600; color:var(--dim); margin-bottom:10px;
+    }
+
+    /* next-slide preview */
+    .preview{
+      position:relative; flex:1; min-height:0;
+      border:1px solid var(--line); border-radius:14px; overflow:hidden;
+      background:#07080c;
+    }
+    .preview iframe{
+      position:absolute; top:0; left:0;
+      width:1600px; height:900px;
+      transform-origin:0 0;
+      border:0;
+    }
+    .preview-end{
+      position:absolute; inset:0; display:none;
+      align-items:center; justify-content:center;
+      font-size:.7rem; letter-spacing:.3em; text-transform:uppercase; color:var(--dim);
+      background:#07080c;
+    }
+    .preview.at-end .preview-end{ display:flex; }
+
+    /* now / next text */
+    .now-chapter{
+      font-size:1.75rem; font-weight:700; letter-spacing:-.025em; line-height:1.15;
+      margin-bottom:6px;
+    }
+    .now-act{
+      font-size:.6rem; letter-spacing:.28em; text-transform:uppercase; font-weight:600;
+      color:var(--green); margin-bottom:14px;
+    }
+    .notes{
+      flex:1; min-height:0; overflow-y:auto;
+      font-size:1rem; line-height:1.7; color:rgba(255,255,255,.76);
+      padding:16px 18px; border-radius:12px;
+      border:1px solid var(--line);
+      background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    }
+    .notes:empty::before{
+      content:'No notes for this slide.';
+      color:var(--dim); font-style:italic;
+    }
+    .next-line{
+      margin-top:14px; padding-top:14px; border-top:1px solid var(--line);
+      font-size:.8rem; color:var(--dim);
+    }
+    .next-line b{ color:rgba(255,255,255,.86); font-weight:600; }
+
+    /* ---------- controls ---------- */
+    .foot{
+      display:flex; align-items:center; gap:10px;
+      padding:14px 22px; border-top:1px solid var(--line); background:var(--panel);
+    }
+    .count{
+      margin-right:auto;
+      font-size:.66rem; letter-spacing:.24em; text-transform:uppercase; color:var(--dim);
+      font-variant-numeric:tabular-nums;
+    }
+    .count b{ color:var(--green); font-weight:700; }
+    .btn{
+      font-family:inherit; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
+      font-weight:600; color:rgba(255,255,255,.75); cursor:pointer;
+      padding:11px 20px; border-radius:100px;
+      background:rgba(255,255,255,.04); border:1px solid var(--line);
+      transition:color .25s, border-color .25s, background .25s, transform .25s var(--ease);
+    }
+    .btn:hover{ color:#fff; border-color:var(--line-hot); background:rgba(38,208,124,.12); transform:translateY(-2px); }
+    .btn.primary{ background:var(--grad); color:#07221d; border-color:transparent; }
+    .btn.primary:hover{ color:#07221d; }
+
+    @media (max-width:900px){
+      main{ grid-template-columns:1fr; grid-template-rows:auto 1fr; }
+      .preview{ min-height:200px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="bar">
+    <span class="brand">
+      <img src="assets/favicon.svg" alt="" />
+      <span>Presenter</span>
+    </span>
+
+    <span class="link-state"><i class="dot" id="dot"></i><span id="link-text">waiting for deck</span></span>
+
+    <div class="clocks">
+      <div class="clock elapsed"><b id="elapsed">00:00</b><span>elapsed</span></div>
+      <div class="clock"><b id="wall">--:--</b><span>time now</span></div>
+      <button type="button" class="tbtn" id="timer-toggle">pause</button>
+      <button type="button" class="tbtn" id="timer-reset">reset</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pane">
+      <p class="pane-label">Next slide</p>
+      <div class="preview" id="preview">
+        <iframe id="mirror" src="index.html#mirror" title="Next slide preview" scrolling="no"></iframe>
+        <div class="preview-end">end of deck</div>
+      </div>
+    </section>
+
+    <section class="pane">
+      <p class="pane-label">On screen now</p>
+      <p class="now-act" id="now-act">—</p>
+      <h1 class="now-chapter" id="now-chapter">Waiting…</h1>
+      <div class="notes" id="notes"></div>
+      <p class="next-line">Up next · <b id="next-chapter">—</b></p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span class="count"><b id="c-now">00</b> / <span id="c-total">00</span></span>
+    <button type="button" class="btn" id="b-first">First</button>
+    <button type="button" class="btn" id="b-prev">← Prev</button>
+    <button type="button" class="btn primary" id="b-next">Next →</button>
+    <button type="button" class="btn" id="b-play">Autoplay</button>
+    <button type="button" class="btn" id="b-last">Last</button>
+  </footer>
+
+  <script>
+  /* The deck and this window talk over one BroadcastChannel. Same origin,
+     no server, no polling — open presenter.html on the laptop screen and the
+     deck on the projector and they stay in step. */
+  const chan = new BroadcastChannel('rcg-deck');
+  const $ = id => document.getElementById(id);
+
+  const el = {
+    dot: $('dot'), link: $('link-text'),
+    act: $('now-act'), chapter: $('now-chapter'), notes: $('notes'),
+    next: $('next-chapter'), cNow: $('c-now'), cTotal: $('c-total'),
+    preview: $('preview'), mirror: $('mirror'),
+    elapsed: $('elapsed'), wall: $('wall'),
+  };
+
+  const pad = n => String(n).padStart(2, '0');
+  const send = (action, index) => chan.postMessage({ type: 'cmd', action, index });
+
+  /* ---------- scale the preview iframe to fit its box ---------- */
+  function fitPreview(){
+    const box = el.preview.getBoundingClientRect();
+    const scale = Math.min(box.width / 1600, box.height / 900);
+    el.mirror.style.transform =
+      `scale(${scale}) translate(${(box.width / scale - 1600) / 2}px, ${(box.height / scale - 900) / 2}px)`;
+  }
+  addEventListener('resize', fitPreview);
+  el.mirror.addEventListener('load', fitPreview);
+  fitPreview();
+
+  /* ---------- deck state ---------- */
+  let linked = false;
+
+  chan.onmessage = ({ data }) => {
+    if (!data) return;
+
+    if (data.type === 'bye'){
+      linked = false;
+      el.dot.classList.remove('live');
+      el.link.textContent = 'deck closed';
+      return;
+    }
+    if (data.type !== 'state') return;
+
+    if (!linked){
+      linked = true;
+      el.dot.classList.add('live');
+      el.link.textContent = 'linked';
+    }
+
+    el.act.textContent = data.now.act || '—';
+    el.chapter.textContent = data.now.chapter;
+    el.notes.textContent = data.now.notes;
+    el.cNow.textContent = pad(data.now.index + 1);
+    el.cTotal.textContent = pad(data.total);
+
+    el.next.textContent = data.next ? data.next.chapter : 'End of deck';
+    el.preview.classList.toggle('at-end', !data.next);
+
+    $('b-play').textContent = data.playing ? 'Stop autoplay' : 'Autoplay';
+  };
+
+  chan.postMessage({ type: 'hello' });     // ask the deck where it is
+  setTimeout(() => {
+    if (!linked) el.link.textContent = 'open the deck to link';
+  }, 1500);
+
+  /* ---------- controls ---------- */
+  $('b-next').onclick  = () => send('next');
+  $('b-prev').onclick  = () => send('prev');
+  $('b-first').onclick = () => send('first');
+  $('b-last').onclick  = () => send('last');
+  $('b-play').onclick  = () => send('play');
+
+  // arrows work from this window too, so the presenter can drive from here
+  addEventListener('keydown', e => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    switch (e.key){
+      case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown':
+        e.preventDefault(); send('next'); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp':
+        e.preventDefault(); send('prev'); break;
+      case 'Home': send('first'); break;
+      case 'End': send('last'); break;
+    }
+  });
+
+  /* ---------- clocks ---------- */
+  let running = true, elapsed = 0, last = performance.now();
+
+  $('timer-toggle').onclick = e => {
+    running = !running;
+    last = performance.now();
+    e.target.textContent = running ? 'pause' : 'start';
+  };
+  $('timer-reset').onclick = () => { elapsed = 0; last = performance.now(); paint(); };
+
+  function paint(){
+    const total = Math.floor(elapsed / 1000);
+    const h = Math.floor(total / 3600);
+    const m = Math.floor(total / 60) % 60;
+    const s = total % 60;
+    el.elapsed.textContent = h ? `${h}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`;
+
+    const now = new Date();
+    el.wall.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  }
+
+  (function tick(now){
+    if (running) elapsed += now - last;
+    last = now;
+    paint();
+    setTimeout(() => requestAnimationFrame(tick), 250);
+  })(performance.now());
+  </script>
+</body>
+
+</html>

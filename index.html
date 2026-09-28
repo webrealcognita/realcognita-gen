@@ -110,10 +110,20 @@
       <span class="glow g1"></span>
       <span class="glow g2"></span>
       <div class="deck-grid"></div>
+      <!-- one tint per act; only opacity animates, so the colour shift is free -->
+      <div class="deck-tint">
+        <span data-act="intro"></span>
+        <span data-act="team"></span>
+        <span data-act="purpose"></span>
+        <span data-act="future"></span>
+        <span data-act="close"></span>
+      </div>
     </div>
 
     <!-- ═══════════ 01 · OPENING TITLE ═══════════ -->
-    <section class="slide is-active" data-chapter="Opening">
+    <section class="slide is-active" data-chapter="Opening" data-act="intro" data-kind="title">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Hold here while the room settles. Do not speak over the logo.</p>
       <div class="stage stage-center">
         <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img slide-logo" data-anim="1" />
         <svg class="brand-fallback slide-logo-fb" viewBox="0 0 40 40" aria-hidden="true" data-anim="1">
@@ -129,7 +139,9 @@
     </section>
 
     <!-- ═══════════ 02 · WELCOME ═══════════ -->
-    <section class="slide" data-chapter="Welcome">
+    <section class="slide" data-chapter="Welcome" data-act="intro" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Leadership welcome. Name the offices out loud — people listen for their own.</p>
       <div class="stage stage-split">
         <div class="col">
           <h2 class="title-lg" data-anim="2">The wait is over.</h2>
@@ -153,7 +165,9 @@
     </section>
 
     <!-- ═══════════ 03 · THE YEAR IN NUMBERS ═══════════ -->
-    <section class="slide" data-chapter="The Numbers">
+    <section class="slide" data-chapter="The Numbers" data-act="intro" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Let each number land. Pause after 480 — that is the one that gets a reaction.</p>
       <div class="stage stage-center">
         <h2 class="title-lg" data-anim="2">The year in four numbers</h2>
         <div class="figure-row">
@@ -167,7 +181,9 @@
     </section>
 
     <!-- ═══════════ 04 · CHAPTER BREAK — ONE TEAM ═══════════ -->
-    <section class="slide" data-chapter="One Team">
+    <section class="slide" data-chapter="One Team" data-act="team" data-kind="chapter">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Chapter break. Say the words, then wait two beats before advancing.</p>
       <div class="stage stage-center">
         <p class="chapter-num" data-anim="1">01</p>
         <h2 class="title-xl grad" data-anim="2">One Team</h2>
@@ -176,7 +192,9 @@
     </section>
 
     <!-- ═══════════ 05 · WHERE WE ARE ═══════════ -->
-    <section class="slide" data-chapter="Our Offices">
+    <section class="slide" data-chapter="Our Offices" data-act="team" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Read the room: ask each office to raise a hand as its flag comes up.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">Where we are</h2>
         <!-- TODO: confirm the office list, cities and headcounts.
@@ -218,7 +236,9 @@
     </section>
 
     <!-- ═══════════ 06 · CHAPTER BREAK — ONE PURPOSE ═══════════ -->
-    <section class="slide" data-chapter="One Purpose">
+    <section class="slide" data-chapter="One Purpose" data-act="purpose" data-kind="chapter">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Chapter break. Slow down — this is the mission slide.</p>
       <div class="stage stage-center">
         <p class="chapter-num" data-anim="1">02</p>
         <h2 class="title-xl grad" data-anim="2">One Purpose</h2>
@@ -227,7 +247,9 @@
     </section>
 
     <!-- ═══════════ 07 · WHAT WE DO ═══════════ -->
-    <section class="slide" data-chapter="What We Do">
+    <section class="slide" data-chapter="What We Do" data-act="purpose" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Three pillars. One sentence each, no more.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">What we are actually for</h2>
         <!-- TODO: replace with your real service pillars -->
@@ -249,7 +271,9 @@
     </section>
 
     <!-- ═══════════ 08 · THE YEAR IN MILESTONES ═══════════ -->
-    <section class="slide" data-chapter="Milestones">
+    <section class="slide" data-chapter="Milestones" data-act="purpose" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Walk the year quarter by quarter. Credit the teams by name.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">The year in milestones</h2>
         <!-- TODO: swap in the real milestones — 4 to 6 works best -->
@@ -263,7 +287,9 @@
     </section>
 
     <!-- ═══════════ 09 · QUOTE / VOICE OF THE TEAM ═══════════ -->
-    <section class="slide" data-chapter="Our People">
+    <section class="slide" data-chapter="Our People" data-act="purpose" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Read the quote aloud. Then name who said it and let them stand.</p>
       <div class="stage stage-quote">
         <!-- PHOTO BOX · square portrait of the person quoted -->
         <figure class="photo square kb" data-anim="1">
@@ -279,7 +305,9 @@
     </section>
 
     <!-- ═══════════ 10 · RECOGNITION ═══════════ -->
-    <section class="slide" data-chapter="Recognition">
+    <section class="slide" data-chapter="Recognition" data-act="purpose" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Awards. Hand over to the host here if awards are live on stage.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">People who moved the year</h2>
         <!-- TODO: award categories + winners, or delete this slide if awards are live on stage -->
@@ -295,7 +323,9 @@
     </section>
 
     <!-- ═══════════ 11 · CHAPTER BREAK — ONE FUTURE ═══════════ -->
-    <section class="slide" data-chapter="One Future">
+    <section class="slide" data-chapter="One Future" data-act="future" data-kind="chapter">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Chapter break. Lift the energy — everything after this is forward-looking.</p>
       <div class="stage stage-center">
         <p class="chapter-num" data-anim="1">03</p>
         <h2 class="title-xl grad" data-anim="2">One Future</h2>
@@ -304,7 +334,9 @@
     </section>
 
     <!-- ═══════════ 12 · THE ROADMAP ═══════════ -->
-    <section class="slide" data-chapter="The Roadmap">
+    <section class="slide" data-chapter="The Roadmap" data-act="future" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">The three commitments. State them plainly; these get quoted back.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">What we are committing to</h2>
         <!-- TODO: the three-to-four commitments leadership wants on record -->
@@ -319,7 +351,9 @@
     </section>
 
     <!-- ═══════════ 13 · A BIG STATEMENT ═══════════ -->
-    <section class="slide" data-chapter="Statement">
+    <section class="slide" data-chapter="Statement" data-act="future" data-kind="chapter">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">One line. Say it once, do not explain it, hold the silence.</p>
       <div class="stage stage-center">
         <!-- TODO: one sentence the room should remember. Keep it short. -->
         <h2 class="statement" data-anim="2">We do not scale by adding people.<br />
@@ -328,7 +362,9 @@
     </section>
 
     <!-- ═══════════ 14 · PROGRAMME ═══════════ -->
-    <section class="slide" data-chapter="The Day">
+    <section class="slide" data-chapter="The Day" data-act="future" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Run of show. Point at the lunch slot — that is what they want to know.</p>
       <div class="stage">
         <h2 class="title-lg" data-anim="2">How the day runs</h2>
         <!-- TODO: confirm the final run of show -->
@@ -344,7 +380,9 @@
     </section>
 
     <!-- ═══════════ 15 · MEDIA PLACEHOLDER ═══════════ -->
-    <section class="slide" data-chapter="Moments">
+    <section class="slide" data-chapter="Moments" data-act="close" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Photo wall. Stay quiet and let people find themselves in the pictures.</p>
       <div class="stage stage-center">
         <h2 class="title-lg" data-anim="2">The year, in pictures</h2>
         <!-- PHOTO WALL · sample images in place. Swap each src for your own
@@ -361,7 +399,9 @@
     </section>
 
     <!-- ═══════════ 16 · FULL-BLEED PHOTO ═══════════ -->
-    <section class="slide slide-bleed" data-chapter="The Room">
+    <section class="slide slide-bleed" data-chapter="The Room" data-act="close" data-kind="content">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Full-bleed shot of the room. Good place to thank the events team.</p>
       <!-- FULL-SCREEN PHOTO · sample image in place; swap the src for your own.
            A <video> works here too. The caption block sits on top of it. -->
       <figure class="photo bleed kb-slow">
@@ -374,7 +414,9 @@
     </section>
 
     <!-- ═══════════ 17 · CLOSING ═══════════ -->
-    <section class="slide" data-chapter="Closing">
+    <section class="slide" data-chapter="Closing" data-act="close" data-kind="title">
+      <!-- Presenter notes: shown only in the presenter view (press V). -->
+      <p class="notes">Close on the theme. Hand back to the host for drinks.</p>
       <div class="stage stage-center">
         <img src="assets/logo.gif" alt="Realcognita" class="brand-gif-img slide-logo sm" data-anim="1" />
         <svg class="brand-fallback slide-logo-fb sm" viewBox="0 0 40 40" aria-hidden="true" data-anim="1">
@@ -387,17 +429,23 @@
     </section>
 
     <!-- ---------- DECK CHROME ---------- -->
-    <div class="deck-rail" aria-hidden="true">
-      <span class="rail-fill" id="rail-fill"></span>
-    </div>
+    <div class="deck-rail" id="deck-rail" aria-hidden="true"></div>
 
     <div class="deck-hud">
       <img src="assets/favicon.svg" alt="" class="hud-mark" />
+      <span class="hud-act" id="hud-act">Intro</span>
       <span class="hud-chapter" id="hud-chapter">Opening</span>
       <span class="hud-count"><b id="hud-now">01</b> / <i id="hud-total">17</i></span>
     </div>
 
     <nav class="deck-dots" id="deck-dots" aria-label="Slides"></nav>
+
+    <!-- overview: press O -->
+    <div class="overview" id="overview" hidden>
+      <p class="overview-title">All slides</p>
+      <div class="overview-grid" id="overview-grid"></div>
+      <p class="overview-hint">click a slide · O or Esc to close</p>
+    </div>
 
     <div class="deck-controls">
       <button type="button" id="btn-prev" class="ctrl" aria-label="Previous slide">&#8592;</button>
@@ -405,10 +453,12 @@
         <span class="ic-play">&#9654;</span><span class="ic-pause">&#10073;&#10073;</span>
       </button>
       <button type="button" id="btn-next" class="ctrl" aria-label="Next slide">&#8594;</button>
+      <button type="button" id="btn-grid" class="ctrl" aria-label="Overview">&#9638;</button>
+      <button type="button" id="btn-presenter" class="ctrl" aria-label="Presenter view">&#9707;</button>
       <button type="button" id="btn-full" class="ctrl" aria-label="Fullscreen">&#9974;</button>
     </div>
 
-    <p class="deck-hint" id="deck-hint">← → or space to advance · F for fullscreen</p>
+    <p class="deck-hint" id="deck-hint">← → advance · O overview · V presenter · F fullscreen</p>
   </main>
 
   <script src="script.js"></script>
